@@ -1135,6 +1135,8 @@
     util.extend(exports, rebound);
   } else if (typeof window != 'undefined') {
     window.rebound = rebound;
+  } else if (typeof module !== 'undefined' && module.exports) {
+    module.exports = rebound;
   }
 })();
 
